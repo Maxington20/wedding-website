@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,re_path,include
+# Import the views from the site_app
+from site_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Connect to the site_app urls.py file
+    path('site_app/',include('site_app.urls'),name='site_app'),
+    path('',views.IndexView.as_view()),
 ]

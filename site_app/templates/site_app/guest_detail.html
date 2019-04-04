@@ -1,0 +1,26 @@
+{% extends "site_app/base.html" %}
+ {% block bodyblock %}
+    <h3>Welcome to the guest details page for {{guest_detail.first_name}} {{guest_detail.last_name}}</h3>
+
+    {% if guest_detail.attending == True %}
+
+    <p>Attending</p>
+     
+        {% if guest_detail.meal_selection == 'C' %}
+            <p>Meal Choice: Chicken</p>
+
+        {% elif guest_detail.meal_selection == 'V' %}
+            <p>Meal Choice: Vegetarion</p>
+
+        {% else %}
+            <p>Meal Choice: Beef</p>
+        {% endif %}
+
+    {% else %}
+
+        <p>Not Attending</p>
+
+    {% endif %}
+
+    
+ {% endblock bodyblock %}
