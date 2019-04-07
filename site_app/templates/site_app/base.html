@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guest List</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../static/css/master.css">
     <link href="https://fonts.googleapis.com/css?family=Ruge+Boogie|Ruthie|Special+Elite" rel="stylesheet">
 </head>
+
 <body>
-    <nav class="navbar navbar-default navbar-collapse navbar-fixed-top">
-        <ul class="nav navbar-nav center">
-            <li><a href="{% url 'site_app:index'%}#top">Max & Kim</a></li>
-            <li><a href="{% url 'site_app:index'%}#our_story">Our Story</a></li>
-            <li><a href="{% url 'site_app:index'%}#wedding_party">Wedding Party</a></li>
-            <li><a href="{% url 'site_app:index'%}#the_wedding">The Wedding</a></li>
-            <li><a href="{% url 'site_app:index'%}#the_wedding">RSVP</a></li>
-            <!-- <li><a class="navbar-link" href="{% url 'site_app:guest_list' %}">Guests</a></li> -->
-        </ul>
+    <nav class="navbar navbar-default" style="background-color: transparent; border: none; margin-top: 1em;">
+    <div class="container-fluid">
+
+        <div class="navbar-header" style="text-align:center">
+            <button type="button" class="navbar-toggle hamburger" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav menu">
+                <li><a href="{% url 'site_app:index'%}#our_story">Our Story</a></li>
+                <li><a href="{% url 'site_app:index'%}#the_wedding">The Wedding</a></li>
+                <li><a href="{% url 'site_app:index'%}#wedding_party">Wedding Party</a></li>
+                <li><a href="{% url 'site_app:index'%}#accomodations">Accomodations</a></li>
+                <li><a href="{% url 'site_app:index'%}#the_wedding">RSVP</a></li>
+            </ul>
+        </div>
+    </div>
+
     </nav>
     <div class="container">
         {% block bodyblock %}
         {% endblock bodyblock %}
     </div>
+    <nav class="navbar navbar-default navbar-collapse navbar-fixed-bottom" style="background-color:white;">
+        <ul class="nav navbar-nav center">
+            <li><a href="{% url 'site_app:index'%}#top">Back to Top</a></li>
+        </ul>
+    </nav>
+
 </body>
+
 </html>
