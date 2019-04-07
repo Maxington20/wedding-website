@@ -1,7 +1,15 @@
 {% extends "site_app/base.html" %}
 
 {% block bodyblock %}
-  <div class="jumbotron">
-      <h1>Welcome to Max and Kim's Wedding Page!</h1>
+  <div class="jumbotron background">
+      <h1 class="headerh1">Kimberly & Maxwell</h1>
+      <p class="pjumbo">October 19, 2018 - Kitchener, Ontario</p>
   </div>
+
+{% include "site_app/_our_story.html" %}
+
+{% include "site_app/_wedding_party.html" %}
+
+{% include "site_app/_the_wedding.html" %}
+
 {% endblock bodyblock %}

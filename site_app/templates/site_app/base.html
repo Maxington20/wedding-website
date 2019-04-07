@@ -7,15 +7,20 @@
     <title>Guest List</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../static/css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Ruge+Boogie|Ruthie|Special+Elite" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-static-top">
-        <ul class="nav navbar-nav">
-            <li><a class="navbar-brand" href="{% url 'site_app:index' %}">Max & Kim</a></li>
-            <li><a class="navbar-link" href="{% url 'site_app:guest_list' %}">Guests</a></li>
+    <nav class="navbar navbar-default navbar-collapse navbar-fixed-top">
+        <ul class="nav navbar-nav center">
+            <li><a href="{% url 'site_app:index'%}#top">Max & Kim</a></li>
+            <li><a href="{% url 'site_app:index'%}#our_story">Our Story</a></li>
+            <li><a href="{% url 'site_app:index'%}#wedding_party">Wedding Party</a></li>
+            <li><a href="{% url 'site_app:index'%}#the_wedding">The Wedding</a></li>
+            <li><a href="{% url 'site_app:index'%}#the_wedding">RSVP</a></li>
+            <!-- <li><a class="navbar-link" href="{% url 'site_app:guest_list' %}">Guests</a></li> -->
         </ul>
     </nav>
-
     <div class="container">
         {% block bodyblock %}
         {% endblock bodyblock %}
